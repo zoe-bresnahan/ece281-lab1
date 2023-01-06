@@ -1,6 +1,6 @@
-# HelloLed
+# Lab 1: Thirty-One Day Month
 
-A minimal VHDL project designed to prove that you have **Vivado 2018.2** installed successfully.
+VHDL template for ECE 281 [Lab 1](https://usafa-ece.github.io/ece281-book/lab/lab1.html)
 
 Targeted toward Digilent Basys3. Make sure to install the [board files](https://github.com/Xilinx/XilinxBoardStore/tree/2018.2/boards/Digilent/basys3).
 
@@ -16,7 +16,7 @@ Build the project using the handy `.bat` file.
 ./build.bat
 ```
 
-You should see a new `helloLed.xpr` file. Open it with Vivado!
+You should see a new `.xpr` file. Open it with Vivado!
 
 ### Manually, without BAT
 
