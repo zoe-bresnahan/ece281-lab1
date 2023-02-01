@@ -17,7 +17,6 @@
 --| switch input, the circuit will light up whenever the 4 switches represent a
 --| month with 31 days
 --|
---| DOCUMENTATION : 
 --|
 --+----------------------------------------------------------------------------
 --|
@@ -53,9 +52,6 @@ library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
 
-library unisim;
-  use UNISIM.Vcomponents.ALL;
-
 -- entity name should match filename, this has been filled out for you  
 entity thirtyOneDayMonth is 
   port(
@@ -75,7 +71,7 @@ architecture thirtyOneDayMonth_arch of thirtyOneDayMonth is
 begin
 	-- CONCURRENT STATEMENTS---------------------------------------
 	--assigning names to reflect original schematics (for ease of understanding if you wish to)
-	w_sel(0)<=i_D;	-- one
+	w_sel(0) <= i_C;	-- one
 	--finish assigning signals
 	
 	--enter your logic here to implement the mux.  See VHDL reference sheet for MUX syntax.	

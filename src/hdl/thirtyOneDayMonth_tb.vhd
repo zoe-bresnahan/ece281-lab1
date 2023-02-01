@@ -15,7 +15,6 @@
 --| CREATED       : 12/12/2019 Last Modified 06/24/2020
 --| DESCRIPTION   : This file tests to ensure thirtyOneDayMonthMux works properly
 --|
---| DOCUMENTATION : None
 --|
 --+----------------------------------------------------------------------------
 --|
@@ -50,9 +49,6 @@
 library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
-
-library unisim;
-  use UNISIM.Vcomponents.ALL;
   
 entity thirtyOneDayMonth_tb is --notice entity is empty.  The testbench has no external connections.
 end thirtyOneDayMonth_tb;
@@ -93,9 +89,12 @@ begin
 	-- Implement the test plan here.  Body of process is continuous from time = 0  
 	test_process : process 
 	begin
-	-- Place test cases here. The first case has been written for you
+	-- Place test cases here. The first two have been written for you
 		w_sw <= x"0"; wait for 10 ns;
-	    --Fill in the rest of the test cases here	
+            assert w_Y = '0' report "error on x0" severity failure;
+        w_sw <= x"1"; wait for 10 ns;
+            assert w_Y = '1' report "error on Jan" severity failure;   
+
 		wait; -- wait forever
 	end process;	
 	-----------------------------------------------------	
