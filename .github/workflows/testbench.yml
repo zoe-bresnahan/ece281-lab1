@@ -8,7 +8,7 @@ jobs:
       - name: Setup GHDL nightly
         uses: ghdl/setup-ghdl-ci@nightly
         with:
-          yambackend: llvm
+          backend: llvm
       - run: ghdl --version
       - name: Check out repository code
         uses: actions/checkout@v3
@@ -24,7 +24,7 @@ jobs:
       - name: Setup GHDL nightly
         uses: ghdl/setup-ghdl-ci@nightly
         with:
-          yambackend: llvm
+          backend: llvm
       - run: ghdl --version
       - name: Check out repository code
         uses: actions/checkout@v3
