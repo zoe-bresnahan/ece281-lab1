@@ -70,7 +70,7 @@ architecture test_bench of thirtyOneDayMonth_tb is
   
   signal w_sw : std_logic_vector (3 downto 0):= (others=> '0');
   signal w_Y : std_logic := '0';
-
+ 
   
 begin
 	-- PORT MAPS ----------------------------------------
@@ -93,7 +93,35 @@ begin
 		w_sw <= x"0"; wait for 10 ns;
             assert w_Y = '0' report "error on x0" severity failure;
         w_sw <= x"1"; wait for 10 ns;
-            assert w_Y = '1' report "error on Jan" severity failure;   
+            assert w_Y = '1' report "error on Jan" severity failure; 
+        w_sw <= x"2"; wait for 10 ns;
+            assert w_Y = '0' report "error on Feb" severity failure;
+        w_sw <= x"3"; wait for 10 ns;
+            assert w_Y = '1' report "error on Mar" severity failure; 
+        w_sw <= x"4"; wait for 10 ns;
+            assert w_Y = '0' report "error on Apr" severity failure;
+        w_sw <= x"5"; wait for 10 ns;
+            assert w_Y = '1' report "error on May" severity failure;
+        w_sw <= x"6"; wait for 10 ns;
+            assert w_Y = '0' report "error on Jun" severity failure;
+        w_sw <= x"7"; wait for 10 ns;
+            assert w_Y = '1' report "error on Jul" severity failure;
+        w_sw <= x"8"; wait for 10 ns;
+            assert w_Y = '1' report "error on Aug" severity failure;
+        w_sw <= x"9"; wait for 10 ns;
+            assert w_Y = '0' report "error on Sep" severity failure;
+        w_sw <= x"A"; wait for 10 ns;
+            assert w_Y = '1' report "error on Oct" severity failure;
+        w_sw <= x"B"; wait for 10 ns;
+            assert w_Y = '0' report "error on Nov" severity failure;
+        w_sw <= x"C"; wait for 10 ns;
+            assert w_Y = '1' report "error on Dec" severity failure;
+        w_sw <= x"D"; wait for 10 ns;
+            assert w_Y = '0' report "error on xD" severity failure;
+        w_sw <= x"E"; wait for 10 ns;
+            assert w_Y = '1' report "error on xE" severity failure;
+        w_sw <= x"F"; wait for 10 ns;
+            assert w_Y = '0' report "error on xF" severity failure;            
 
 		wait; -- wait forever
 	end process;	
